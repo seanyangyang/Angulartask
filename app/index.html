@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />		
+	<link rel="stylesheet" href="./prd/styles/app.css">
+</head>
+<body>
+	<div ng-controller="sort">
+		<p><input type="text" ng-model="firstName" placeholder="search firstName"></p>
+		<table>
+			<tr>
+				<td ng-click="sort($event,'firstname')"><span></span>firstname</td>
+				<td ng-click="sort($event,'lastname')"><span></span>lastname</td>
+				<td ng-click="sort($event,'salary')"><span></span>salary</td>
+				<td ng-click="sort($event,'birthday')"><span></span>birthday</td>
+			</tr>
+			<tr ng-repeat="p in people | filter:searchFirst:value | orderBy: field">
+				<td>{{p.firstname}}</td>
+				<td>{{p.lastname}}</td>
+				<td>{{p.salary}}</td>
+				<td>{{p.birthday}}</td>
+			</tr>
+		</table>
+	</div>
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="./src/scripts/libs/jquery-2.1.1.min.js"></script>
+	<script src="./prd/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+	color:#000;
+}
+.title{
+	color:green;
+}
+.enable{
+	color:red
+}
+.disable{
+	text-decoration: line-through;
+	color: #ccc;
+}
+table{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	td{
+		position: relative;
+		border: 1px solid #000;
+		text-align: center;
+	}
+}
+.up{
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 5px transparent solid;
+	border-top-color: #000;
+}
+
+.down{
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 5px transparent solid;
+	border-bottom-color: #000;
+}
