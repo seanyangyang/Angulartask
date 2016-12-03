@@ -14,12 +14,14 @@
 				<td ng-click="sort($event,'firstname')"><span></span>firstname</td>
 				<td ng-click="sort($event,'lastname')"><span></span>lastname</td>
 				<td ng-click="sort($event,'salary')"><span></span>salary</td>
+				<td ng-click="sort($event,'salary')"><span></span>salary</td>
 				<td ng-click="sort($event,'birthday')"><span></span>birthday</td>
 			</tr>
 			<tr ng-repeat="p in people | filter:searchFirst:value | orderBy: field">
 				<td>{{p.firstname}}</td>
 				<td>{{p.lastname}}</td>
 				<td>{{p.salary}}</td>
+				<td>{{p.salary | currency:"$"}}</td>
 				<td>{{p.birthday}}</td>
 			</tr>
 		</table>
