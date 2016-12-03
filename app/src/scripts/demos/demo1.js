@@ -64,7 +64,7 @@ angular.module("myApp",[])
 			else if(el.className=="up")
 			{
 				el.className="down";
-				$scope.field=-text;
+				$scope.field="-"+text;
 			}
 
 		}
